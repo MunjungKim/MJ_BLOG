@@ -9,6 +9,43 @@
       <url>https://welcome-mj-blog.netlify.app/images/papermod-cover.png</url>
       <link>https://welcome-mj-blog.netlify.app/images/papermod-cover.png</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://welcome-mj-blog.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 10 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://welcome-mj-blog.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>code</title>
+      <link>https://welcome-mj-blog.netlify.app/tags/code/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://welcome-mj-blog.netlify.app/tags/code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gist</title>
+      <link>https://welcome-mj-blog.netlify.app/tags/gist/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://welcome-mj-blog.netlify.app/tags/gist/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>markdown</title>
+      <link>https://welcome-mj-blog.netlify.app/tags/markdown/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://welcome-mj-blog.netlify.app/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>syntax</title>
+      <link>https://welcome-mj-blog.netlify.app/tags/syntax/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://welcome-mj-blog.netlify.app/tags/syntax/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

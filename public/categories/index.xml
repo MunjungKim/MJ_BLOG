@@ -9,6 +9,25 @@
       <url>https://welcome-mj-blog.netlify.app/images/papermod-cover.png</url>
       <link>https://welcome-mj-blog.netlify.app/images/papermod-cover.png</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://welcome-mj-blog.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 10 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://welcome-mj-blog.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>syntax</title>
+      <link>https://welcome-mj-blog.netlify.app/categories/syntax/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://welcome-mj-blog.netlify.app/categories/syntax/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>themes</title>
+      <link>https://welcome-mj-blog.netlify.app/categories/themes/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://welcome-mj-blog.netlify.app/categories/themes/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
