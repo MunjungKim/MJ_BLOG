@@ -1,3 +1,0 @@
-User-agent: *
-Disallow:
-Sitemap: https://welcome-mj-blog.netlify.app/sitemap.xml
