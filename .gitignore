@@ -1,0 +1,17 @@
+.DS_Store
+Gemfile.lock
+_site
+.bundle
+.sass-cache
+.jekyll-metadata
+.idea*
+*~
+*.gem
+.ipynb_checkpoints
+.ipynb_checkpoints/*
+*.ipynb
+*.aux
+*.log
+*.out
+*.synctex.gz
+_latex/
