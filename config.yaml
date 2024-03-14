@@ -87,9 +87,9 @@ params:
         url: tags
 
   homeInfoParams:
-    Title: "PaperMod's Demo"
+    Title: "MJ's Blog"
     Content: >
-      Hi, there! 👋 Welcome to my blog!
+      Hello there! 👋 Welcome to my blog! I'm Munjung Kim, but you can call me MJ for short. Here, I'll be sharing my study notes.
 
   socialIcons:
     - name: github
