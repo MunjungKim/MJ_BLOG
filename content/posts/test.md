@@ -1,153 +1,145 @@
 ---
-author: ["Aditya Telange"]
-title: "Code Syntax Guide"
-date: "2019-03-10"
-description: "Sample article showcasing basic code syntax and formatting for HTML elements."
-summary: "Sample article showcasing basic code syntax and formatting for HTML elements."
-tags: ["markdown", "syntax", "code", "gist"]
-categories: ["themes", "syntax"]
-series: ["Themes Guide"]
+author: ["Munjung Kim"]
+title: "Lecture 1: Introduction to Reinforcement Learning"
+date: "2022-01-22"
+description: "A lecture note of RL course by David Silver"
+summary: "Characteristics of Reinforcement Learning"
+tags: ["lecture-note", "reinforcement-learning"]
+categories: ["lecture-note", "reinforcement-learning"]
+# series: ["Themes Guide"]
 ShowToc: true
 TocOpen: true
 ---
 
-### Inline Code
+### What is Reinforcement Learning?
 
-`This is Inline Code`
+Reinforcement Leraning is across various fields including computer science, neuro science, and psychology. It's about the "science of decision making."
 
-### Only `pre`
+Reinforcement learning is different from other machine learning paradimg as there is no supervisor, only a reward signal. No one tells us right action to take. Just try and error. Also feedback is delayed. It is not instantaneous. Also time really matters, as it is sequential. Also agent's take the action, so their action can affect the subsequent data it receives. 
 
-<pre>
-This is pre text
-</pre>
+### Rewards
 
-### Code block with backticks
+* A reward $R_t$ is a scalar feedback signal.
+* It indicates how well agent is doing at stpe $t$.
+* THe agent's job is to maximise cumulative reward.
 
-```{hl_lines=[2,8]}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Example HTML5 Document</title>
-    <meta
-      name="description"
-      content="Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-    />
-  </head>
-  <body>
-    <p>Test</p>
-  </body>
-</html>
-```
+##### Reward hypothesis
+All goals can be described by the maximization of expected cumulative reward.
 
-### Code block with backticks and language specified
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Example HTML5 Document</title>
-    <meta
-      name="description"
-      content="Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-    />
-  </head>
-  <body>
-    <p>Test</p>
-  </body>
-</html>
-```
+### Major Components of an RL Agent
 
-### Code block with backticks and language specified with line numbers
+An RL agent may include one or more of these components:
 
-```html {linenos=true}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Example HTML5 Document</title>
-    <meta
-      name="description"
-      content="Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-    />
-  </head>
-  <body>
-    <p>Test</p>
-  </body>
-</html>
-```
+* Policy: agent's behaviour function
+* Value function: how good is each state and/or action
+* Model: agent's representation of the environment
 
-### Code block with line numbers and <mark>highlighted</mark> lines
+#### Policy
 
-- PaperMod supports `linenos=true` or `linenos=table`
+* A plicy is the agent's behaviour
+* It is a map from state to action
+* Stochastic policy, deterministic policy
 
-```html {linenos=true,hl_lines=[2,8]}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Example HTML5 Document</title>
-    <meta
-      name="description"
-      content="Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-    />
-  </head>
-  <body>
-    <p>Test</p>
-  </body>
-</html>
-```
+#### Value
 
-- <del>With `linenos=inline` line <mark>**might not** get highlighted</mark> properly.<del>
-- This issue is fixed with [045c084](https://github.com/adityatelange/hugo-PaperMod/commit/045c08496d61b1b3f9c79e69e7d3d243a526d8f3)
+* Value function is a prediction of future reward
+* Used to evaluate the goodness and badness of states
+* And therefore to select between actions, 
 
-```html {linenos=inline,hl_lines=[2,8]}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Example HTML5 Document</title>
-    <meta
-      name="description"
-      content="Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-    />
-  </head>
-  <body>
-    <p>Test</p>
-  </body>
-</html>
-```
 
-### Code block indented with four spaces
+### MDPs
 
-    <!doctype html>
-    <html lang="en">
-    <head>
-      <meta charset="utf-8">
-      <title>Example HTML5 Document</title>
-    </head>
-    <body>
-      <p>Test</p>
-    </body>
-    </html>
+* Markov decision processes formally describe an environment for reinforcement learning where the environemnt is fully observable
+* Almost all RL problems can be formalized as MDPs
 
-### Code block with Hugo's internal highlight shortcode
+#### Markov Property
+"The future is independent of the past given the present"
+* Definition : A state $S_t$ is Markov if and only if $P[S_{t+1}|S_t] = P[S_{t+1}|S_1, ...,S_t]$
 
-{{< highlight html >}}
 
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Example HTML5 Document</title>
-</head>
-<body>
-  <p>Test</p>
-</body>
-</html>
-{{< /highlight >}}
+#### Markov Process
 
-### Github Gist
+#### Markov Reward Process
 
-{{< gist adityatelange 376cd56ee2c94aaa2e8b93200f2ba8b5 >}}
+A Markov Reward Process is a tuple  $<S,P,R,\gamma>$
+
+* $S$ is a finite set of states
+* $P$ is a state stransition probability matrix.
+* $R$ is a reward function, $R_s = E[R_{t+1}|S_t = s]$
+* $\gamma$ is a discount factor.
+
+
+#### Return
+
+The return $G_t$ is the total discounted reward from time-stemp $t$.
+
+$G_t = R_{t+1} + \gamma R_{t+2} + ....$
+
+* Why discount?
+- Animal/human behaviour shows preference for immediate reward
+- Avoids infinite returns in cyclic Markov processes
+
+
+#### Value Function
+
+The value function $v(s)$ gives the long-term value of state $s$.
+
+The state value function $v(s)$ of an MRP is the expected return starting from state $s$.
+
+$v(s) = E[G_t|S_t = s]$
+
+where 
+
+$G_t = R_{t+1} + \gamma R_{t+2} + ....$
+
+
+It's expectation because the environment is stochastic
+
+The value function can be decomposed into two parts
+
+imeediate reward $R_t$
+
+discounted value of successor state $\gamma v(s_{t+1})$
+
+
+$v(s) = E[G_t|S_t = s] = E[R_{t+1} + \gamma  v(s_{t+1})] = R_s + \gamma \sum_{s' \inc S} P_{ss'} v(s') $
+
+
+
+#### Bellman Equation
+
+* The Bellman Equation is a linear equation
+* It can be solved directly
+
+$v = R + \gamma Pv$
+
+* comutational complexity is O(n^3) for n states
+
+### Markov Decision Process
+
+A Markov Decision Process is a tuple  $<S,A,P,R,\gamma>$
+
+
+#### Policy
+
+A policy $\pi$ is a distribution over actions given states,
+
+$\pi(a|s) = P[A_t = a| S_t = s]$
+
+* MDP policies depend on the current states (not the history)
+* Policies are stationary (time-independent)
+
+
+{{< math.inline >}}
+
+<p>
+Inline math: \(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\)
+</p>
+{{</ math.inline >}}
+
+Block math:
+
+$$
+ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
+$$
