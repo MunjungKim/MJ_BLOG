@@ -3,9 +3,9 @@ author: ["Munjung Kim"]
 title: "What is Reinforcement Learning?"
 date: "2024-03-13"
 description: "A lecture note of RL course by Dongrou Zhou and David Silver"
-summary: "Value function for neural networks and general function approximations: q learning, DQN"
+summary: "Key concepts of reinforcement learning"
 tags: ["lecture-note", "reinforcement-learning", "fitted-q-learning"]
-categories: ["lecture-note", "reinforcement-learning","value-function"]
+categories: ["lecture-note", "reinforcement-learning"]
 # series: ["Themes Guide"]
 ShowToc: true
 TocOpen: true
@@ -101,23 +101,24 @@ How can we get the optimal policy \(\pi^{*}\)? One way might be explore all poss
 {{< math.inline >}} 
 3. While \(|\pi_i - \pi_{i-1}| > 0\)
 {{</ math.inline >}}
-- Evaluate the value of {{< math.inline >}} \(\pi_i\){{</ math.inline >}} (Policy Evaluation)
-- Based on the evaluation of{{< math.inline >}} \(\pi_i\), improve \(\pi_i\) to \(\pi_{i+1}\){{</ math.inline >}}
-- {{< math.inline >}} \(i+=1\){{</ math.inline >}}
+- **Policy Evaluation** : Evaluate the value of {{< math.inline >}} \(\pi_i\) by using 
+$$V^{\pi_i}(s) = \sum_{s'} p(s'|s,\pi(s))(r + \gamma \cdot V^{\pi_i}(s'))$${{</ math.inline >}} 
 
+$$\pi_i \rightarrow V^{\pi_i}$$
 
-In policy iteration, the key steps involve **evaluating** the current policy and then **improving** it iteratively. The evaluation helps understand how good the current policy is, while the improvement step seeks to enhance the policy to achieve better performance.
+- **Policy Improvement** : Based on the evaluation of{{< math.inline >}} \(\pi_i\), improve \(\pi_i\) to \(\pi_{i+1}\){{</ math.inline >}}
 
-**Policy Evaluation: Bellman Equation**
+$$
+\pi_{i+i}(s) = \argmax_{a}  \big[\sum_{s'}  p(s'|s,a)(r + \gamma \cdot V^{\pi_i}(s') )\big]
+$$
 
- {{< math.inline >}}We can calculate Q function of \(\pi_i\) by using Bellman Equation {{</ math.inline >}}.
-
-
-**Policy Improvement: Greedy Policy**
-
-{{< math.inline >}} Based on \( Q^{\pi_i} \), we derive a new policy \( \pi_{i+1} \) using the greedy policy approach. This entails selecting the action with the highest Q-value for each state according to \( Q^{\pi_i} \). {{</ math.inline >}}
+or 
 
 $$ \pi_{i+1}(s) = \argmax_{a} Q^{\pi_i}(s,a) \forall s \in S$$
+
+$$ V^{\pi_i} \rightarrow \pi_{i+1}$$
+
+- {{< math.inline >}} \(i+=1\){{</ math.inline >}}
 
 ### Value Iteration
 
@@ -132,7 +133,11 @@ Policy iteration computes the infinite horizon value of a policy and then improv
 {{< math.inline >}} 
 3. While \(|Q_i - Q_{i-1}| > 0\)
 {{</ math.inline >}}
-- {{< math.inline >}} \( Q_{i+1} = R(s,a) + \gamma \mathbb{E}_{s' \sim P(s,a)} V_Q(s') \), where \(V_Q(s) = \max_{a'} Q(s',a')\) {{</ math.inline >}}
+- {{< math.inline >}} \( Q_{i+1} = R(s,a) + \gamma \mathbb{E}_{s' \sim P(s,a)} V_Q(s') \), where {{</ math.inline >}}
+
+$$
+V_Q(s') = \max_a \big[ \sum_{s''}  p(s''|s',a)(r + \gamma*V(s'') \big]
+$$
 
 So it is like assuming {{< math.inline >}}\( Q(s,a)\) by summing the immediate reward \(R(s,a)\) and the maximum cummulative rewards of \(V(s')\) based on current assumption. {{</ math.inline >}}
 
