@@ -4,7 +4,7 @@ title: "Exploring Gradient Descent and Its Variants"
 date: "2021-05-13"
 description: "A lecture note of Machine Learning course by Prof. Hwang"
 summary: "Gradient Descent and Its Variantst"
-tags: ["lecture-note", "gradient-descent", "machine-learning", "momentum-methods","adagrad]
+tags: ["lecture-note", "gradient-descent", "machine-learning", "momentum-methods","adagrad"]
 categories: ["lecture-note", "machine-learning"]
 # series: ["Themes Guide"]
 ShowToc: true
