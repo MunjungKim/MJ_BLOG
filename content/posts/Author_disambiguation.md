@@ -53,10 +53,10 @@ OpenAlex provides their own author identifiers. It seems like OpenAlex is provid
 
 ### SciSciNet
 
-SciSciNet dataset provided by this [paper](https://www.nature.com/articles/s41597-023-02198-9) also uses MAG author disambiguation method. 
+SciSciNet dataset provided by this [paper](https://www.nature.com/articles/s41597-023-02198-9) also uses MAG author disambiguation method. They acknowledged the remained challenges of the author disambiguation.
 
 ### Other sources
 
 #### Faculty dataset
 
-If you do not need the 
+If you're not interested in the general publication trajectory of scientists but instead require data on specific cases such as faculty members, you can utilize the dataset used in [this paper](https://www-pnas-org.proxyiub.uits.iu.edu/doi/abs/10.1073/pnas.1702121114).
