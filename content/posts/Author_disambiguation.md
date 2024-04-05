@@ -25,11 +25,16 @@ APS does not provide disambiguated author data. However, the authors of [this pa
 2) two of authors identified in the previous step are considered to be the same individual if *all* of the following conditions are fulfilled
 
     i) Last names of the two authors are identical
-    ii) initials of the first names and , when available, given names are the same. When the full first names and given names are present for both authors, they have to be identical.
+
+    ii) Initials of the first names and , when available, given names are the same. When the full first names and given names are present for both authors, they have to be identical.
+    
     iii) One of the following is true:
-        * the two authors cited each other at leas once
-        * the two authors share at leas one co-author
-        * the two authors share at least one similar affiliations (which is measured by cosine similarity of tf-idf metrics)
+
+    - the two authors cited each other at leas once
+
+    - the two authors share at leas one co-author
+
+    - the two authors share at least one similar affiliations (which is measured by cosine similarity of tf-idf metrics)
 
 According to the author, accuracy of the disambiguation algorithm evaluated through random 200 pairs papers considered to be written by the same authors and random 200 pairs papers considered to be written by the different authors was not bad. The false positive rate was 2% and false negative rate was 12%. I couldn't find the source code for this method. 
 
@@ -44,7 +49,7 @@ OpenAlex provides their own author identifiers. It seems like OpenAlex is provid
 
 ### Web of Science
 
-[This paper]() uses 
+[This paper](https://www.nature.com/articles/s41598-024-54693-7#Sec1) about the author's mobility in the space of scientific periodicals uses web of science dataset. However, they used the MAG disambiguated data again for those collected articles from WOS.
 
 ### SciSciNet
 
