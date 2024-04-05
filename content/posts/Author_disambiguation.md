@@ -12,7 +12,7 @@ TocOpen: true
 math: true
 ---
 
-When I try to do a research about the individual scientists' career with large-scale dataset, one of the biggest challenge is data availability since there is no one universally accepted solution for obtaining trustful author identifiers. Different studies focusing on individual careers employ different approaces to achieve accurate author identification as they all use different data sources. Some data sources offer author identifiers, but it is also essential to comprehend the methodologies behind author disambiguation and the reliability of the results obtained to do a research with these datasets. For this reason, I do a survey aiming to explore the diverese approaches adopted by studies or by different data sources. In this post, I classify those approaches by the data sources.
+When I try to do a research about the individual scientists' career with large-scale dataset, one of the biggest challenge is data availability of disambiguated author name. There is no one universally accepted solution for obtaining trustful author identifiers and therefore, different studies focusing on individual careers employ different approaces to achieve accurate author identification. Some data sources offer author identifiers, but it is also essential to comprehend the methodologies behind author disambiguation and the reliability of the results obtained to do a research with these datasets. For this reason, I do a survey aiming to explore the diverese approaches adopted by studies or by different data sources. In this post, I classify those approaches by the data sources.
 
 
 
