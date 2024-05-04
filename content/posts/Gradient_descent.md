@@ -56,7 +56,7 @@ $$
 w_k  = w_{k-1} - \eta \cdot \nabla_w \sum_{i=1}^{B} L(w_{k-1};x_i,y_i)
 $$
 
-![limitation](../image/gradient.png)
+![limitation](../../image/Gradient.png)
 
 
 ### Momentum Methods
